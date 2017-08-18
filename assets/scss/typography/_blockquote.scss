@@ -1,0 +1,50 @@
+@mixin blockquote {
+    @include fontsize(26px);
+    @include spacing(margin-top, 1rem);
+    @include spacing(padding-bottom, 2rem);
+    line-height: 40/26;
+    font-weight: 300;
+    font-style: italic;
+
+    position: relative;
+
+    &:before {
+        content: "\201C";
+        @include fontsize(80px);
+        @include spacing(margin-right, 1.5rem);
+        line-height: 1;
+        font-weight: normal;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 100%;
+        @extend .brand-color;
+    }
+}
+
+@mixin cite {
+	display: block;
+
+	font-size: initial;
+	font-style: normal;
+
+	@include spacing(margin-top, 1rem);
+
+	&:before {
+		content: "";
+		@include cite-dash;
+	}
+}
+
+@mixin cite-dash {
+	position: relative;
+	top: -6px;
+	left: 0;
+
+	display: inline-block;
+	width: 60px;
+	height: 1px;
+	margin-right: 20px;
+
+	background-color: currentColor;
+}

@@ -1,0 +1,151 @@
+@mixin field {
+    //width: 330px;
+    font: inherit;
+    padding: .8em;
+    outline: 0;
+    transition: all .2s;
+    background: transparent;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+
+    &:hover {
+        border-color: #9D9D9D;
+    }
+}
+
+@mixin label {
+    display: block;
+    position: absolute;
+    top: .8em;
+    left: .8em;
+    transition: all .2s;
+    will-change: transform;
+    color: color(gray);
+}
+
+%field {
+    @include field;
+
+}
+
+@include placeholder {
+    color: transparent;
+    transition: color .3s;
+}
+
+.field {
+    position: relative;
+
+    label {
+        @include label;
+    }
+}
+
+.field-focused {
+    @include placeholder {
+        color: color(gray);
+    }
+}
+
+.field-focused,
+.field-has-value {
+
+    %field {
+        padding-top: 1.35em;
+        padding-bottom: 0.25em;
+        border-color: color(blue);
+    }
+
+    label {
+        top: .25em;
+        color: color(blue);
+        transform: scale(0.8125);
+        transform-origin: 0 0;
+    }
+}
+
+.field-invalid,
+.field-has-error {
+    color: color(pink);
+
+    %field {
+        border-color: color(pink);
+    }
+
+    label {
+        color: color(pink);
+    }
+}
+
+
+
+
+input[type="text"],
+textarea {
+    @extend %field;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: none;
+
+    + label {
+        display: flex;
+    }
+
+    + label:before {
+        content: "";
+        display: inline-block;
+        width: 1.5em;
+        height: 1.5em;
+        margin-right: 0.875em;
+        background: #EAEAEA;
+        flex-shrink: 0;
+    }
+
+
+    &:disabled + label:before {
+        border: 0.125em solid #D0D0D0;
+    }
+}
+
+input[type="radio"] {
+
+    + label:before {
+        border-radius: 50%;
+    }
+
+    &:checked + label:before {
+        border: 0.4375em solid color(blue);
+        background: #FFFFFF;
+    }
+}
+
+.checkbox {
+    position: relative;
+}
+
+input[type="checkbox"] {
+
+    + label:before {
+        border-radius: 4px;
+    }
+
+    &:checked + label:after {
+        content: "";
+        display: block;
+        width: 0.75em;
+        height: 0.4em;
+        position: absolute;
+        top: .7em;
+        left: .8em;
+        border: 0 solid #ffffff;
+        border-left-width: 0.15em;
+        border-bottom-width: 0.15em;
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &:checked + label:before {
+        background: color(blue);
+    }
+}

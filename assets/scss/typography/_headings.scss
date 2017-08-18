@@ -1,0 +1,59 @@
+@mixin h1 {
+    @include fontsize(46px);
+    //@include baseline(60/40, 0.74);
+    line-height: (60/46);
+}
+
+@mixin h2 {
+    @include fontsize(28px);
+    //@include baseline(28/39, 0.74);
+    line-height: (40/30);
+    @extend .brand-color;
+}
+
+@mixin h3 {
+    @include fontsize(18px);
+    //@include baseline(33/18, 0.74);
+    line-height: (33/18);
+    text-transform: uppercase;
+}
+
+@mixin h4 {
+    @include fontsize(18px);
+    //@include baseline(32/18, 0.74);
+    line-height: (32/18);
+    font-weight: 300;
+}
+
+h1 { @include h1 }
+h2 { @include h2 }
+h3 { @include h3 }
+h4, h5, h6 { @include h4 }
+
+.entry-content {
+
+    h1 {
+        @include spacing(padding-top, .5rem);
+        @include spacing(padding-bottom, .5rem);
+    }
+
+    h2 {
+        @include spacing(padding-top, .5rem);
+        @include spacing(padding-bottom, .5rem);
+    }
+
+    h3 {
+        @include spacing(padding-top, .5rem);
+        @include spacing(padding-bottom, .5rem);
+    }
+
+    h4, h5, h6 {
+        @include spacing(padding-top, .5rem);
+        @include spacing(padding-bottom, .5rem);
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Galano Classic", sans-serif;
+    font-weight: bold;
+}

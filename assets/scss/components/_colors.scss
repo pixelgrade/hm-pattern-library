@@ -1,0 +1,66 @@
+$colors: (
+    blue: (
+        dark: #2A3634,
+        regular: #1BB1A1,
+        light: #F5F7F7
+    ),
+    pink: (
+        dark: #4F373E,
+        regular: #DE1651,
+        light: #F7F5F6
+    ),
+    orange: (
+        dark: #4F3F37,
+        regular: #FF671F,
+        light: #F7F6F5
+    ),
+    purple: (
+        dark: #473850,
+        regular: #9660C6,
+        light: #F6F5F7
+    ),
+    gray: (
+        black: #212121,
+        dark: #303030,
+        regular: #67616B,
+        light: #F8F8F8
+    ),
+    black: (
+        regular: #212121
+    )
+);
+
+@function color($main, $variation: regular) {
+    @return map-get(map-get($colors, $main), $variation);
+}
+
+.brand-color {
+    color: color(blue);
+}
+
+.brand-background-color {
+    color: color(blue);
+}
+
+@each $name, $set in $colors {
+    @each $variation, $value in $set {
+        $color: #{$name};
+        @if $variation != regular {
+            $color: #{$name}-#{$variation};
+        }
+        .background-#{$color} {
+            background-color: $value;
+        }
+        .color-#{$color} {
+            color: $value;
+        }
+
+        .brand-#{$color} .brand-color {
+            color: $value;
+        }
+
+        .brand-#{$color} .brand-background-color {
+            background-color: $value;
+        }
+    }
+}

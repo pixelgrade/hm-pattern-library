@@ -1,0 +1,44 @@
+*, :before, :after {
+    box-sizing: border-box;
+}
+
+$global-radius: 4px;
+$baseline-unit: 16px;
+
+@import "tools/baseline";
+@import "tools/functions";
+@import "tools/mixins";
+
+@import "tools/typeline-config";
+@import "tools/typeline";
+
+@import "typography/core";
+
+@import "components/colors";
+@import "components/button";
+@import "components/forms";
+@import "components/titles";
+
+@import "vendor/select2/core";
+
+body {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.swatch {
+    width: 150px;
+    height: 150px;
+}
+
+.section {
+    padding: 40px 40px 0;
+}
+
+.section-inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+@import "shame";

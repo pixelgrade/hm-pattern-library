@@ -1,0 +1,4 @@
+@mixin p {
+    @include spacing(padding-top, .5rem);
+    @include spacing(padding-bottom, 2rem);
+}

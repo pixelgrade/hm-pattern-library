@@ -1,0 +1,67 @@
+@import "fonts";
+
+@import "blockquote";
+@import "headings";
+@import "links";
+@import "lists";
+@import "paragraphs";
+@import "pre";
+@import "table";
+
+$baseline-unit: 					16px						!default;
+
+$body-font-size:             		18px            			!default;
+$body-line-height:           		(30/18)             		!default;
+$body-font-family:          		"Roboto", sans-serif       	!default;
+$body-text-color:					#000000						!default;
+
+$text-selection-color: 				#FFFFFF						!default;
+$text-selection-background-color: 	#000000						!default;
+
+// just set the desired baseline unit here
+// so we can use rem units to multiply it
+html {
+	font-size: percentage($baseline-unit/16px);
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	font-family: "Galano Grotesque Alt", sans-serif;
+	@include fontsize($body-font-size);
+
+	color: $body-text-color;
+	line-height: $body-line-height;
+}
+
+em,
+i,
+small {
+	font-style: italic;
+}
+
+@mixin render-typography-styles() {
+
+    h1, h2, h3, h4, h5, h6,
+    p, blockquote, pre, table,
+    dl, ul, ol {
+        margin: 0;
+    }
+
+	p           { @include p }
+
+	blockquote  { @include blockquote }
+	pre         { @include pre }
+	table       { @include table }
+
+	dl          { @include dl }
+	ul          { @include ul }
+	ol          { @include ol }
+
+    :first-child { padding-top: 0 }
+    :last-child { padding-bottom: 0 }
+}
+
+.entry-content {
+	@include render-typography-styles();
+}

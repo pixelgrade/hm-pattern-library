@@ -1,0 +1,128 @@
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+
+/**
+ * This is an example component. Extend inuitcss by building your own components
+ * that make up your UI. Component classes are prefixed with a `c-`.
+ */
+
+/**
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+ *    buttons).
+ * 4. Reset/normalize some styles.
+ * 5. Force all button-styled elements to appear clickable.
+ */
+
+.c-btn {
+    display: inline-block; /* [1] */
+    vertical-align: middle; /* [2] */
+    font: inherit; /* [3] */
+    text-align: center; /* [4] */
+    margin: 0; /* [4] */
+    cursor: pointer; /* [5] */
+    border-radius: $global-radius;
+    background: transparent;
+
+    border: 1px solid;
+    padding: .8em 1.6em;
+    transition: all .3s;
+
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+    }
+
+    &:hover,
+    &:focus {
+        box-shadow: 0 0.625em 1.3em -0.625em rgba(0, 0, 0, 0.7);
+    }
+}
+
+.c-btn:disabled,
+.c-btn[disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Style variants
+   ========================================================================== */
+
+.c-btn--text {
+    border: 0;
+    color: color(blue);
+
+    &:hover,
+    &:focus {
+        color: color(black);
+        box-shadow: none;
+    }
+}
+
+.c-btn--primary {
+    background-color: color(blue);
+    color: #ffffff;
+
+    &:hover,
+    &:focus {
+        border-color: color(blue);
+    }
+}
+
+
+.c-btn--secondary {
+    color: color(blue);
+
+    &:hover,
+    &:focus {
+        background-color: color(blue);
+        border-color: color(blue);
+        color: white;
+        box-shadow: none;
+    }
+}
+
+.c-btn--tertiary {
+    background-color: color(black);
+    color: white;
+    border-color: transparent;
+}
+
+.c-btn--invert {
+
+    &.c-btn--text {
+        color: white;
+    }
+
+    &.c-btn--primary {
+        background-color: #ffffff;
+        color: color(black);
+        border-color: transparent;
+    }
+
+    &.c-btn--secondary {
+        color: white;
+
+        &:hover,
+        &:focus {
+            border-color: white;
+        }
+    }
+}
+
+/* Size variants
+   ========================================================================== */
+
+.c-btn--small {
+    font-size: 14px;
+    padding: .3em 1.6em;
+}
+
+.c-btn--large {
+    font-size: 18px;
+    padding: 1.2em 2em;
+}
