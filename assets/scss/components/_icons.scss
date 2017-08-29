@@ -1,0 +1,274 @@
+$icon-font-path: "vendor/pg-pattern-library/assets/fonts/Pixicons";
+
+@font-face {
+    font-family: "pixicons";
+    src: url('#{$icon-font-path}/pixicons.eot');
+    src: url('#{$icon-font-path}/pixicons.eot?#iefix') format('eot'),
+    url('#{$icon-font-path}/pixicons.woff2') format('woff2'),
+    url('#{$icon-font-path}/pixicons.woff') format('woff'),
+    url('#{$icon-font-path}/pixicons.ttf') format('truetype'),
+    url('#{$icon-font-path}/pixicons.svg#pixicons') format('svg');
+}
+
+.icon {
+    &:not(:empty) {
+        &:before {
+            //margin-right: $base-spacing-unit-tiny;
+        }
+        &:after {
+            //margin-left: $base-spacing-unit-tiny;
+        }
+    }
+
+    &--right {
+        &:before {
+            content: none !important;
+        }
+    }
+}
+
+.icon {
+    &:before,
+    &:after {
+        font-family: pixicons;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        display: inline-block;
+        font-size: inherit;
+        font-weight: normal;
+        font-style: normal;
+        font-variant: normal;
+        line-height: 1;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        /* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+        text-decoration: none;
+        text-transform: none;
+
+        vertical-align: middle;
+    }
+}
+
+
+.icon-arrow-down {
+    &:before, &.icon--right:after {
+        content: "\E001";
+    }
+}
+
+.icon-arrow-left {
+    &:before, &.icon--right:after {
+        content: "\E002";
+    }
+}
+
+.icon-arrow-right {
+    &:before, &.icon--right:after {
+        content: "\E003";
+    }
+}
+
+.icon-arrow-up {
+    &:before, &.icon--right:after {
+        content: "\E004";
+    }
+}
+
+.icon-burger {
+    &:before, &.icon--right:after {
+        content: "\E005";
+    }
+}
+
+.icon-checkbox {
+    &:before, &.icon--right:after {
+        content: "\E006";
+    }
+}
+
+.icon-clipboard {
+    &:before, &.icon--right:after {
+        content: "\E007";
+    }
+}
+
+.icon-design {
+    &:before, &.icon--right:after {
+        content: "\E008";
+    }
+}
+
+.icon-down {
+    &:before, &.icon--right:after {
+        content: "\E009";
+    }
+}
+
+.icon-error {
+    &:before, &.icon--right:after {
+        content: "\E00A";
+    }
+}
+
+.icon-facebook {
+    &:before, &.icon--right:after {
+        content: "\E00B";
+    }
+}
+
+.icon-faq {
+    &:before, &.icon--right:after {
+        content: "\E00C";
+    }
+}
+
+.icon-fiftyoff {
+    &:before, &.icon--right:after {
+        content: "\E00D";
+    }
+}
+
+.icon-frown {
+    &:before, &.icon--right:after {
+        content: "\E00E";
+    }
+}
+
+.icon-header-footer {
+    &:before, &.icon--right:after {
+        content: "\E00F";
+    }
+}
+
+.icon-icon-envato {
+    &:before, &.icon--right:after {
+        content: "\E010";
+    }
+}
+
+.icon-instagram {
+    &:before, &.icon--right:after {
+        content: "\E011";
+    }
+}
+
+.icon-invoice {
+    &:before, &.icon--right:after {
+        content: "\E012";
+    }
+}
+
+.icon-left {
+    &:before, &.icon--right:after {
+        content: "\E013";
+    }
+}
+
+.icon-lifetime {
+    &:before, &.icon--right:after {
+        content: "\E014";
+    }
+}
+
+.icon-pages {
+    &:before, &.icon--right:after {
+        content: "\E015";
+    }
+}
+
+.icon-pay {
+    &:before, &.icon--right:after {
+        content: "\E016";
+    }
+}
+
+.icon-plugins {
+    &:before, &.icon--right:after {
+        content: "\E017";
+    }
+}
+
+.icon-remove {
+    &:before, &.icon--right:after {
+        content: "\E018";
+    }
+}
+
+.icon-right {
+    &:before, &.icon--right:after {
+        content: "\E019";
+    }
+}
+
+.icon-safe-lock {
+    &:before, &.icon--right:after {
+        content: "\E01A";
+    }
+}
+
+.icon-safe-white {
+    &:before, &.icon--right:after {
+        content: "\E01B";
+    }
+}
+
+.icon-safe {
+    &:before, &.icon--right:after {
+        content: "\E01C";
+    }
+}
+
+.icon-search {
+    &:before, &.icon--right:after {
+        content: "\E01D";
+    }
+}
+
+.icon-smile {
+    &:before, &.icon--right:after {
+        content: "\E01E";
+    }
+}
+
+.icon-social {
+    &:before, &.icon--right:after {
+        content: "\E01F";
+    }
+}
+
+.icon-start {
+    &:before, &.icon--right:after {
+        content: "\E020";
+    }
+}
+
+.icon-success {
+    &:before, &.icon--right:after {
+        content: "\E021";
+    }
+}
+
+.icon-support {
+    &:before, &.icon--right:after {
+        content: "\E022";
+    }
+}
+
+.icon-twitter {
+    &:before, &.icon--right:after {
+        content: "\E023";
+    }
+}
+
+.icon-up {
+    &:before, &.icon--right:after {
+        content: "\E024";
+    }
+}
+
+.icon-view {
+    &:before, &.icon--right:after {
+        content: "\E025";
+    }
+}

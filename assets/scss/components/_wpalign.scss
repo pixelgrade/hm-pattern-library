@@ -1,0 +1,99 @@
+// Images at the same level with paragraphs
+// <p>..</p>
+// <img>
+// <p>..</p>
+[class*="align"] {
+    width: auto !important;
+
+    &, img {
+        display: block;
+    }
+}
+
+.alignnone,
+.aligncenter {
+    display: block;
+}
+
+.aligncenter {
+
+    &, img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.alignleft,
+.alignright {
+    max-width: 50%;
+}
+
+.alignleft {
+    @include spacing(padding-right, 3rem);
+    float: left;
+    clear: left;
+}
+
+.alignright {
+    @include spacing(padding-left, 3rem);
+    float: right;
+    clear: right;
+}
+
+// Images inside paragraphs
+// <p>
+//     <img>
+// </p>
+p {
+    .alignleft {
+        @include spacing(margin-bottom, 2rem);
+    }
+
+    .alignright {
+        @include spacing(margin-bottom, 2rem);
+    }
+
+    .alignleft,
+    .alignright,
+    .aligncenter,
+    .alignnone {
+        clear: none;
+    }
+
+    .alignnone {
+        display: inline-block;
+    }
+}
+
+// Images with captions
+// <div class="wp-caption">
+//     <img ... >
+//     <p class="wp-caption-text"> ... </p>
+// </div>
+.wp-caption {
+    @include spacing(margin-top, 1rem);
+
+    .entry-content & + p {
+        // ...
+    }
+}
+
+[class*="wp-caption"] {
+    color: color(gray);
+    text-align: center;
+}
+
+.wp-caption-text[class] {
+    @include spacing(padding-top, 1rem);
+    @include fontsize(14px);
+    @include baseline();
+}
+
+
+// Image Only Child Inside Paragraphs (no text)
+// <p>
+//      <img>
+// </p>
+// ...
+// will be moved to the same level through JavaScript
+

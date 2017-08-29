@@ -51,15 +51,13 @@ small {
 	p           { @include p }
 
 	blockquote  { @include blockquote }
+	cite        { @include cite }
 	pre         { @include pre }
 	table       { @include table }
 
 	dl          { @include dl }
 	ul          { @include ul }
 	ol          { @include ol }
-
-    :first-child { padding-top: 0 }
-    :last-child { padding-bottom: 0 }
 }
 
 .entry-content {

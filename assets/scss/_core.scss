@@ -15,15 +15,25 @@ $baseline-unit: 16px;
 @import "typography/core";
 
 @import "components/colors";
+
 @import "components/button";
 @import "components/forms";
-@import "components/titles";
+@import "components/icons";
+@import "components/pill";
+@import "components/label";
+
+@import "components/wpalign";
 
 @import "vendor/select2/core";
 
 body {
     max-width: 800px;
     margin: 50px auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .swatch {

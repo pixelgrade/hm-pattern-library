@@ -2,7 +2,7 @@
     @include fontsize(26px);
     @include spacing(margin-top, 1rem);
     @include spacing(padding-bottom, 2rem);
-    line-height: 40/26;
+    line-height: (40/26);
     font-weight: 300;
     font-style: italic;
 
@@ -24,27 +24,15 @@
 
 @mixin cite {
 	display: block;
+    @include fontsize(13px);
+    font-family: "Galano Classic", sans-serif;
+    font-weight: bold;
+    line-height: (33/13);
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: (2em/13);
 
-	font-size: initial;
-	font-style: normal;
-
-	@include spacing(margin-top, 1rem);
-
-	&:before {
-		content: "";
-		@include cite-dash;
-	}
-}
-
-@mixin cite-dash {
-	position: relative;
-	top: -6px;
-	left: 0;
-
-	display: inline-block;
-	width: 60px;
-	height: 1px;
-	margin-right: 20px;
-
-	background-color: currentColor;
+    &:before {
+        content: "\2014\00a0";
+    }
 }

@@ -1,0 +1,82 @@
+// Image alignment
+
+[class*="align"] {
+    max-width: 100%;
+
+    img {
+        display: block;
+    }
+}
+
+.alignleft,
+.alignright {
+    max-width: 50%;
+    //margin-bottom: 10px;
+}
+
+.alignleft {
+    float: left;
+    margin-right: 30px !important;
+    padding: 0 !important;
+}
+
+.alignright {
+    float: right;
+    margin-left: 30px !important;
+}
+
+.entry-content [class*="align"] {
+    //margin-top: 8px;
+
+    @media screen and (max-width: 900px) {
+        max-width: 100% !important;
+    }
+}
+
+.aligncenter {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aligncenter,
+.alignnone {
+    display: block;
+}
+
+p > img[class*="align"] {
+    //margin-top: 10px;
+    //margin-bottom: 10px;
+}
+
+[class*="wp-caption"] {
+    @include fontsize(14px);
+
+    //margin-top: 10px;
+
+    color: #767377;
+    text-align: center;
+}
+
+// Galleries
+
+/* Galleries */
+.gallery {
+    margin-left: -14px;
+
+    .gallery-item {
+        margin: 0;
+        display: inline-block;
+        vertical-align: top;
+
+        text-align: center;
+        border: 0 solid transparent;
+        border-top-width: 14px;
+        border-left-width: 14px;
+    }
+}
+
+@for $i from 1 to 10 {
+    .gallery-columns-#{$i} .gallery-item {
+        width: percentage(1/$i);
+    }
+}

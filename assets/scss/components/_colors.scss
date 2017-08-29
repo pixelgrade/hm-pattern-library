@@ -39,28 +39,71 @@ $colors: (
 }
 
 .brand-background-color {
-    color: color(blue);
+    background-color: color(blue);
+}
+
+.brand-border-color {
+    background-color: color(blue);
+}
+
+.brand-color-light {
+    color: color(blue, light);
+}
+
+.brand-background-color-light {
+    background-color: color(blue, light);
+}
+
+.brand-border-color-light {
+    background-color: color(blue, light);
+}
+
+.brand-color-dark {
+    color: color(blue, dark);
+}
+
+.brand-background-color-dark {
+    background-color: color(blue, dark);
+}
+
+.brand-border-color-dark {
+    background-color: color(blue, dark);
 }
 
 @each $name, $set in $colors {
+
     @each $variation, $value in $set {
+
         $color: #{$name};
+
         @if $variation != regular {
             $color: #{$name}-#{$variation};
         }
+
         .background-#{$color} {
             background-color: $value;
         }
+
         .color-#{$color} {
             color: $value;
         }
 
-        .brand-#{$color} .brand-color {
+        $brand: color;
+
+        @if $variation != regular {
+            $brand: color-#{$variation};
+        }
+
+        .brand-#{$name} .brand-#{$brand} {
             color: $value;
         }
 
-        .brand-#{$color} .brand-background-color {
+        .brand-#{$name} .brand-background-#{$brand} {
             background-color: $value;
+        }
+
+        .brand-#{$name} .brand-border-#{$brand} {
+            border-color: $value;
         }
     }
 }

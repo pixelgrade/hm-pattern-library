@@ -24,7 +24,7 @@
     margin: 0; /* [4] */
     cursor: pointer; /* [5] */
     border-radius: $global-radius;
-    background: transparent;
+    background-color: transparent;
 
     border: 1px solid;
     padding: .8em 1.6em;
@@ -64,38 +64,34 @@
 }
 
 .c-btn--primary {
-    background-color: color(blue);
+    @extend .brand-background-color;
+    @extend .brand-border-color;
     color: #ffffff;
-
-    &:hover,
-    &:focus {
-        border-color: color(blue);
-    }
 }
 
 
 .c-btn--secondary {
-    color: color(blue);
+    @extend .brand-color;
 
     &:hover,
     &:focus {
-        background-color: color(blue);
-        border-color: color(blue);
-        color: white;
+        @extend .brand-background-color;
+        @extend .brand-border-color;
+        color: #FFFFFF;
         box-shadow: none;
     }
 }
 
 .c-btn--tertiary {
     background-color: color(black);
-    color: white;
+    color: #FFFFFF;
     border-color: transparent;
 }
 
 .c-btn--invert {
 
     &.c-btn--text {
-        color: white;
+        color: #FFFFFF;
     }
 
     &.c-btn--primary {
@@ -105,11 +101,11 @@
     }
 
     &.c-btn--secondary {
-        color: white;
+        color: #FFFFFF;
 
         &:hover,
         &:focus {
-            border-color: white;
+            border-color: #FFFFFF;
         }
     }
 }

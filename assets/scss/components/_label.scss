@@ -1,0 +1,21 @@
+.label {
+    display: inline-block;
+    background-color: color(gray, light);
+    border-radius: 4px;
+    @include fontsize(12px);
+    line-height: (20/12);
+    font-weight: bold;
+    padding: .55em 1em .35em;
+    transition: all .15s ease-out;
+
+    &:hover {
+        @extend .brand-color-light;
+        @extend .brand-background-color;
+    }
+}
+
+.label--invert {
+    &:hover {
+        background-color: color(gray, dark);
+    }
+}

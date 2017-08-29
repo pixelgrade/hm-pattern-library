@@ -1,0 +1,24 @@
+.pill {
+    display: inline-block;
+    padding: .6em 1em .4em 1.1em;
+    min-width: 2em;
+
+    @extend .brand-color-light;
+    @extend .brand-background-color;
+    border-radius: 1em;
+
+    @include fontsize(12px);
+    line-height: 1;
+    font-weight: bold;
+    text-align: center;
+
+    [class*="brand"] & {
+        background-color: #FFFFFF;
+        color: color(black);
+    }
+}
+
+.pill--round {
+    padding-left: .5em;
+    padding-right: .5em;
+}

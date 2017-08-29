@@ -1,0 +1,26 @@
+.section p {
+    @include spacing(padding-top, 1rem);
+    @include spacing(padding-bottom, .5rem);
+}
+
+.icons {
+    font-size: 2em;
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: -0.25em;
+    margin-left: -0.25em;
+
+    > * {
+        margin-top: 0.25em;
+        margin-left: 0.25em;
+    }
+}
+
+.icon {
+    line-height: 1;
+}
+
+.icons + .icons {
+    margin-top: 1rem;
+}

@@ -1,59 +1,59 @@
-$fonts-path: "vendor/pg-pattern-library/assets/fonts/Galano/";
+$fonts-path: "vendor/pg-pattern-library/assets/fonts/Galano";
 
 // body
 @font-face {
     font-family: "Galano Grotesque Alt";
-    src: url("vendor/pg-pattern-library/assets/fonts/Galano/Galano Grotesque Alt.otf");
+    src: url("#{$fonts-path}/Galano Grotesque Alt.otf");
 }
 
 @font-face {
     font-family: "Galano Grotesque Alt";
     font-style: italic;
-    src: url("vendor/pg-pattern-library/assets/fonts/Galano/Galano Grotesque Alt Italic.otf");
+    src: url("#{$fonts-path}/Galano Grotesque Alt Italic.otf");
 }
 
 @font-face {
     font-family: "Galano Grotesque Alt";
     font-weight: bold;
-    src: url("vendor/pg-pattern-library/assets/fonts/Galano/Galano Grotesque Alt Semi Bold.otf");
+    src: url("#{$fonts-path}/Galano Grotesque Alt Semi Bold.otf");
 }
 
 @font-face {
     font-family: "Galano Grotesque Alt";
     font-weight: bold;
     font-style: italic;
-    src: url("vendor/pg-pattern-library/assets/fonts/Galano/Galano Grotesque Alt Semi Bold Italic.otf");
+    src: url("#{$fonts-path}/Galano Grotesque Alt Semi Bold Italic.otf");
 }
 
 @font-face {
     font-family: "Galano Grotesque Alt";
     font-weight: 500;
-    src: url("vendor/pg-pattern-library/assets/fonts/Galano/Galano Grotesque Alt Medium.otf");
+    src: url("#{$fonts-path}/Galano Grotesque Alt Medium.otf");
 }
 
 @font-face {
     font-family: "Galano Grotesque Alt";
     font-weight: 500;
     font-style: italic;
-    src: url("vendor/pg-pattern-library/assets/fonts/Galano/Galano Grotesque Alt Medium Italic.otf");
+    src: url("#{$fonts-path}/Galano Grotesque Alt Medium Italic.otf");
 }
 
 @font-face {
     font-family: "Galano Grotesque Alt";
     font-weight: 300;
-    src: url("vendor/pg-pattern-library/assets/fonts/Galano/Galano Grotesque Alt Light.otf");
+    src: url("#{$fonts-path}/Galano Grotesque Alt Light.otf");
 }
 
 @font-face {
     font-family: "Galano Grotesque Alt";
     font-weight: 300;
     font-style: italic;
-    src: url("vendor/pg-pattern-library/assets/fonts/Galano/Galano Grotesque Alt Light Italic.otf");
+    src: url("#{$fonts-path}/Galano Grotesque Alt Light Italic.otf");
 }
 
 // headings
 @font-face {
     font-family: "Galano Classic";
     font-weight: bold;
-    src: url("vendor/pg-pattern-library/assets/fonts/Galano/Galano Classic Bold.otf");
+    src: url("#{$fonts-path}/Galano Classic Bold.otf");
 }
